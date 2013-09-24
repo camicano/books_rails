@@ -1,0 +1,8 @@
+<!-- <h1>Add a Book!</h1>
+<form method='post' action='/books/create'>
+	<input type='text' name='book[title]' placeholder='title' />
+	<input type='text' name='book[author]' placeholder='author' />
+	<input type='submit' value='add' />
+</form> -->
+
+<%= render partial: "form", locals: {book: @books} %>

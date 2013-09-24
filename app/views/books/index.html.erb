@@ -1,0 +1,11 @@
+<div class="offset-by-two">
+	<div >
+		<nav>
+			<a class="menu" href='/books/new'>Add new book</a>
+		<% @books.each do |book| %>
+			<a href='/books/<%= book.id %>'>
+				<h3><%= book.title %></h3>
+			</a>
+		<% end %>
+	</div>
+</div>	

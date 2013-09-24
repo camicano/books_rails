@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+	<div class="offset-by-one">
+		<div class="six columns">
+			<h1 id="h1">books</h1>
+		</div>
+	</div>
+	<div id="header" class="six columns">
+	<%= yield %>
+	</div>
+</div>
+
+</body>
+</html>
