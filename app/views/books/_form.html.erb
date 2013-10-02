@@ -1,9 +1,6 @@
 <%= form_for book do |f| %>
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
-
-  <%= f.label :author %>:
-  <%= f.text_field :author %><br />
+  <%= f.text_field :title, :placeholder => "Title" %><br />
+  <%= f.text_field :author, :placeholder => "Author"  %><br />
 
   <%= f.submit %>
 <% end %>

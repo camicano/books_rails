@@ -1,8 +1,6 @@
-<!-- <h1>Add a Book!</h1>
-<form method='post' action='/books/create'>
-	<input type='text' name='book[title]' placeholder='title' />
-	<input type='text' name='book[author]' placeholder='author' />
-	<input type='submit' value='add' />
-</form> -->
-
-<%= render partial: "form", locals: {book: @books} %>
+<div id="header" class="nine columns">
+	<div class='offset-by-three'>
+		<%= render partial: "form", locals: {book: @book} %>
+		<%= link_to "home", books_path, :class => "links"  %>
+	</div>
+</div>

@@ -1,1 +1,6 @@
-<%= render partial: "form", locals: {book: @books} %>
+<div id="header" class="nine columns">
+	<div class='offset-by-three'>
+	<%= render partial: "form", locals: {book: @book} %>
+	<%= link_to "home", books_path, :class => "links"  %>
+	</div>
+</div>

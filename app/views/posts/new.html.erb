@@ -1,0 +1,11 @@
+<div id="header" class="nine columns">
+	<div class='offset-by-three'>
+		<h1 class="title">add a message about <%= @book.title %>!</h1>
+		<form method="post" action='/books/<%= @book.id %>/posts'>
+			<label class="links">Post:</label>
+			<textarea name="post"> </textarea>
+			<input type='submit' />
+		</form>
+		<%= link_to "home", books_path, :class => "links"  %>
+	</div>
+</div>

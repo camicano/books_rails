@@ -1,20 +1,21 @@
-<h1><%= @book.title %></h1>
-<h3><%= @book.author %></h3>
+<div id="header" class="nine columns">
+	<div class='offset-by-three'>
+	<h1><strong  class="texts"><%= @book.title %></strong></h1>
+	<h3 class="texts"><%= @book.author %></h3>
 
-<ul>
+	<ul>
 
 		<% @book.posts.each do |post| %>
-			<li><%= post.message %></li>
+			<li class="texts"><%= post.message %></li>
 		<% end %>
+	</ul>
 
-</ul>
-
-	<form method='get' action='/books/<%= @book.id %>/edit' >
-		<input type='submit' value='edit' /> 
-	</form> 
-	<form method='delete' action='/books/<%= @book.id %>' >
-		<input type='submit' value='delete' /> 
-	</form>
-	<form method='get' action='/books/<%= @book.id %>/posts' >
-		<input type='submit' value='add word' /> 
-	</form>  
+	<%= link_to "Edit", edit_book_path, :class => "links" %>  |  
+	<%= link_to "Add word", "/books/#{@book.id}/posts", :class => "links" %>  |  
+	<%= link_to "Delete", "/books/#{@book.id}", method:"delete", :class => "links" %>
+	<br>
+	<br>
+	<br>
+	<%= link_to "home", books_path, :class => "links" %>
+	</div>
+</div>

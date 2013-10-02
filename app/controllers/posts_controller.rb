@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	def new
-		@book = Book.find(params[:id])
+		@book = Book.find(params[:book_id])
+		@post = Post.new
 	end
 
 	def create
@@ -9,7 +10,7 @@ class PostsController < ApplicationController
 		posted.message = post
 		
 
-		@book = Book.find(params[:id])
+		@book = Book.find(params[:book_id])
 		@book.posts << posted
 		@book.save
 

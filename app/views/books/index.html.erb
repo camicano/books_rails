@@ -1,11 +1,13 @@
-<div class="offset-by-two">
-	<div >
-		<nav>
-			<a class="menu" href='/books/new'>Add new book</a>
+<div id="header" class="nine columns">
+	<div class='offset-by-three'>
 		<% @books.each do |book| %>
 			<a href='/books/<%= book.id %>'>
-				<h3><%= book.title %></h3>
+				<h1><strong class="text"><%= book.title %></strong></h1>
 			</a>
 		<% end %>
+		<br>
+		<br>
+		<a class="links" href='/books/new'>Add new book</a>
 	</div>
+</div>
 </div>	
